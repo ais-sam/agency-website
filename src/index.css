@@ -1,0 +1,38 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.percentage{
+  @apply  relative h-1 w-full rounded-md bg-gray-200 block before:content-[''] before:absolute before:top-0 before:left-0  before:h-full before:bg-w-yellow before:rounded-md  after:absolute  after:-top-5 after:text-w-yellow after:text-sm;
+}
+/* active class to change the background color of navigation bar  */
+@media screen and (min-width:768px) {
+  header.active{
+    background-color: #1a1a1a;
+    z-index: 100;
+    position: fixed;
+    transition: all .3s ease;
+    box-shadow: 0px 17px 15px -3px rgba(0,0,0,0.1);
+  }
+  header.active ul a{
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+  }
+  header.active ul a:hover{
+    color: #3EA8E3;
+  }
+
+  header.active .social-info{
+    display: none;
+  }
+
+  header.active .nav-container{
+    background-color: transparent;
+  }
+  
+}
+
